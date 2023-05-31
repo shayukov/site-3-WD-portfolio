@@ -1,0 +1,603 @@
+html {
+  box-sizing: border-box !important;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+.none {
+  display: none !important;
+}
+:root {
+  --accent-color: #34547a;
+}
+.text-a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.1em;
+}
+.text-p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #727272;
+}
+.text-h2 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+}
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Шапка */
+.first-screen {
+  background-color: #eeeff1;
+  padding-top: 62px;
+  padding-bottom: 173px;
+}
+.first-screen__flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 136px;
+}
+.first-screen-icon {
+  margin-left: 20px;
+}
+.first-screen-a__text {
+  margin-right: 39px;
+}
+.first-screen-a__text span {
+  color: var(--accent-color);
+}
+.first-screen-a__text:last-child {
+  margin-right: 29px;
+}
+
+/*Шапка (Дизайн и вёрстка) */
+.first-screen__items {
+  display: flex;
+}
+.item-icon {
+  padding-top: 30px;
+  padding-left: 101px;
+  padding-right: 131px;
+}
+.item-button {
+  max-width: 540px;
+}
+.first-screen-h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 79px;
+  color: #000000;
+  margin-bottom: 33px;
+}
+.first-screen-p {
+  line-height: 26px;
+  margin-bottom: 52px;
+}
+.first-screen__btn {
+  width: 225px;
+  height: 65px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #34547a;
+  border: none;
+  cursor: pointer;
+}
+
+/* Шапка (Обо мне) */
+.about-me {
+  padding-top: 92px;
+  margin-bottom: 93px;
+}
+.about-me__card {
+  text-align: center;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.about-me__h2 {
+  margin-bottom: 38px;
+}
+/* Numbers */
+.numbers {
+  background-color: var(--accent-color);
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.numbers__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 49px;
+}
+.numbers__grid-item {
+  display: flex;
+}
+.grid-item-icon {
+  margin-right: 20px;
+}
+.numbers__grid:first-child {
+  padding-left: 19px;
+}
+.numbers__grid:last-child {
+  padding-right: 40px;
+}
+.numbers-h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 25px;
+  color: #ffffff;
+}
+.numbers-p {
+  color: #ffffff;
+}
+/* Мои навыки */
+.skills {
+  padding: 100px 0 101px;
+}
+.skills__flex {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
+}
+.skills__flex-list {
+  padding-top: 100px;
+  min-width: 445px;
+}
+.skills-h2 {
+  margin-bottom: 39px;
+}
+.skills-p {
+  margin-bottom: 10px;
+}
+.skills-line {
+  height: 3px;
+  background-color: var(--accent-color);
+}
+.skills-photo {
+  width: 555px;
+  height: 450px;
+}
+.skills-progress {
+  margin-bottom: 27px;
+  height: 5px;
+}
+.skills-progress-determinate {
+  background-color: #34547a;
+}
+#C4C4C4
+/* Видео */
+.video {
+  background-color: #eeeff1;
+  padding-top: 95px;
+  padding-bottom: 100px;
+}
+.video__items {
+  text-align: center;
+}
+.video__title {
+  max-width: 540px;
+  margin: 0 auto;
+}
+.video__title-h2 {
+  margin-bottom: 37px;
+}
+.video__title-p {
+  margin-bottom: 51px;
+}
+.video-item {
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  max-width: 895px;
+  margin: 0 auto;
+}
+.video-overlay {
+  z-index: 99;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity o.2s ease;
+}
+.video-overlay.hidden {
+  opacity: 0;
+}
+.video-object {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+.video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.play {
+  position: inherit;
+  transform: inherit;
+}
+/*проекты и клиенты*/
+.projects {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 24px;
+  padding-bottom: 100px;
+}
+.projects__grid {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 480px);
+}
+.projects-p {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  display: block;
+}
+.card {
+  background-image: url(../img/project-imag1.jpg);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.card2 {
+  background-image: url(../img/project-imag2.jpg);
+}
+.card-view-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.5s ease;
+  z-index: 2;
+}
+.card-filter {
+  position: absolute;
+  background-color: #34547a;
+  opacity: 0;
+  z-index: 1;
+  transition: 0.5s ease;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.card:hover .card-view-icon {
+  opacity: 1;
+}
+.card:hover .card-filter {
+  opacity: 0.5;
+}
+/*  */
+.clients__flex {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 72px;
+  flex-wrap: wrap;
+}
+.clients {
+  width: 255px;
+  height: 120px;
+}
+/* Форма */
+.form {
+  text-align: center;
+  padding-top: 99px;
+  padding-bottom: 90px;
+  background-color: #eeeff1;
+}
+.form-inner {
+  max-width: 540px;
+  margin: 0 auto;
+}
+.form-h2 {
+  margin-bottom: 37px;
+}
+.form-p {
+  max-width: 540px;
+  margin: 0 auto 59px;
+}
+.input__flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.form-input {
+  display: inline-block;
+  width: 255px !important;
+  height: 50px !important;
+  border: none !important;
+  padding-left: 20px !important;
+  background-color: #fff !important;
+  box-sizing: border-box !important;
+}
+.form-textarea {
+  display: block;
+  min-height: 175px;
+  border: none;
+  padding-left: 21px;
+  padding-top: 18px;
+  margin-bottom: 50px;
+  background-color: #fff;
+}
+.form-button {
+  margin-bottom: 0;
+}
+/* Footer */
+.footer {
+  background-color: var(--accent-color);
+  padding-top: 46px;
+  padding-bottom: 50px;
+}
+.footer__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-text {
+  padding-left: 19px;
+  padding-top: 2px;
+}
+.footer-text-h3 {
+  margin-bottom: 15px;
+}
+.footer-text-p {
+  color: #ffffff;
+}
+.footer-icon img {
+  margin-right: 18px;
+}
+.footer-icon img:last-child {
+  margin-right: 0;
+  padding-right: 3px;
+}
+
+@media screen and (max-width: 1320px) {
+  .numbers__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .skills__flex {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .numbers__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    width: 100%;
+  }
+  .item-icon {
+    padding-right: 100px;
+  }
+  .numbers__grid {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+  .skills {
+    padding-top: 0;
+  }
+  .skills__flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .video-item video {
+    max-width: 990px;
+  }
+  .projects__grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  .first-screen {
+    padding-top: 52px;
+    padding-bottom: 50px;
+  }
+  .about-me {
+    padding-top: 50px;
+  }
+  .footer-icon {
+    padding-right: 15px;
+  }
+}
+@media (max-width: 769px) {
+  .item-icon {
+    padding: 0;
+  }
+  .first-screen-a__text:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 479px) and (max-width: 768px) {
+  .first-screen-icon {
+    margin-bottom: 30px;
+  }
+  .first-screen__flex {
+    margin-bottom: 50px;
+  }
+  .first-screen__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item-icon {
+    margin-bottom: 30px;
+  }
+  .item-button {
+    padding-right: 0;
+    text-align: center;
+  }
+  .video-item video {
+    max-width: 767px;
+  }
+  .projects__grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .first-screen-a__text {
+    margin-right: 20px;
+  }
+  .first-screen__flex {
+    display: block;
+  }
+  .first-screen-a {
+    padding-left: 15px;
+  }
+  .footer-icon {
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .numbers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills__flex-list {
+    text-align: center;
+  }
+  .skills-photo {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 490px) {
+  .projects-p {
+    width: 380px;
+    height: 380px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects__grid {
+    grid-template-columns: 380px;
+  }
+  .skills__flex-list {
+    min-width: 0;
+    width: 100%;
+  }
+  .first-screen__flex {
+    flex-wrap: wrap;
+    margin-bottom: 76px;
+  }
+  .first-screen-icon {
+    margin-bottom: 20px;
+  }
+
+  .first-screen__items {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .item-icon {
+    margin-bottom: 30px;
+  }
+  .item-icon img {
+    width: 257px;
+  }
+  .item-button {
+    text-align: center;
+  }
+  .first-screen-a {
+    padding-left: 20px;
+  }
+  .first-screen-a__text {
+    margin-right: 15px;
+  }
+  .about-me-p {
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  .numbers__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skills__flex-image {
+    max-width: 350px;
+  }
+  .skills-photo {
+    width: 100%;
+    height: 100%;
+  }
+  .video-item video {
+    max-width: 478px;
+  }
+  .video__title-p {
+    padding-left: 20px;
+    margin-right: 20px;
+  }
+  .projects__grid {
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+  }
+  .footer-icon {
+    padding-right: 15px;
+  }
+  .footer-text + div {
+    padding-top: 20px;
+  }
+}
+@media (max-width: 390px) {
+  .projects-p {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .numbers__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 370px) {
+  .projects-p {
+    width: 300px;
+    height: 300px;
+  }
+}
